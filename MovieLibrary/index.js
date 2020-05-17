@@ -4,16 +4,16 @@ var bodyParser = require("body-parser");
 
 
 
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/movieDb', {useNewUrlParser: true, useUnifiedTopology: true});
+// const mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost:27017/movieDb', {useNewUrlParser: true, useUnifiedTopology: true});
 
-const Movie = mongoose.model('movieCollections', {
-	title: String,
-	year: String,
-	genre: String,
-	poster: String,
-	default: ''
-	});
+// const Movie = mongoose.model('movieCollections', {
+// 	title: String,
+// 	year: String,
+// 	genre: String,
+// 	poster: String,
+// 	default: ''
+// 	});
 
 
 
@@ -40,15 +40,15 @@ app.get("/results",function(req,res){
 		});		
 });
 
-app.post("/addfriend",function(req,res){
+// app.post("/addfriend",function(req,res){
 	
-		console.log(req.body);
-	new Movie(req.body).save(function(err,result){
-		console.log(err+ result);
-	});
-		 res.send("dsf");
+// 		console.log(req.body);
+// 	new Movie(req.body).save(function(err,result){
+// 		console.log(err+ result);
+// 	});
+// 		 res.send("dsf");
 
-		 })
+// 		 })
 
 
 app.get("*",function(req,res){
