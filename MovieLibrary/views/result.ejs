@@ -1,0 +1,14 @@
+<h1> Result Page</h1>
+<ul>
+<% if(data["Response"]=="True") {%>
+	<% data["Search"].forEach(function(item) { %>
+		<li><ul>
+			<li><%= item["Title"]%> - <%= item["Year"]%></li>
+			<a href="<%= "https://www.imdb.com/title/" + item["imdbID"] %>"><img src="<%= item["Poster"] %>" ></a>
+		</ul></li>
+	<% }) %>
+<% }else{ %>
+	<h5> Try another search</h5>
+<%}%>
+
+</ul>
